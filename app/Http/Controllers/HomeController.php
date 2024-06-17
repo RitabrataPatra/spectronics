@@ -17,13 +17,13 @@ class HomeController extends Controller
     public function Home(){
         $products = Product::all();
         $testimonials = Testimonial::all();
-        $category = Category::all();
+        $category1 = Category::all();
         $user = Auth::user();
         // $userid= $user->id;
         $userid = auth()?->user()?->id;
         
         
-        return view ('Home.index',compact('products','testimonials','category'));
+        return view ('Home.index',compact('products','testimonials','category1'));
     }
     public function login_home(){
         $products = Product::all();
@@ -38,13 +38,14 @@ class HomeController extends Controller
     public function productspage($id){
 
         
-            // $category = Category::all();
+            $category1 = Category::all();
+
             $category=Category::where('id',$id)->first();
             // dd($category);
             
             $products = Product::where('catid',$category->id)->get();
             // dd($products);
-            return view('Home.productpage',compact('category','products'));
+            return view('Home.productpage',compact('category1','products'));
         
         
         // $products = Product::all();
@@ -58,13 +59,13 @@ class HomeController extends Controller
     public function testimonialspage(){
         $products = Product::all();
         $testimonials = Testimonial::all();
-        $category = Category::all();
+        $category1 = Category::all();
         $user = Auth::user();
         // $userid= $user->id;
         $userid = auth()?->user()?->id;
        
         
-        return view('Home.testipage',compact('testimonials', 'category' ,'products'));
+        return view('Home.testipage',compact('testimonials', 'category1' ,'products'));
     }
 
     // About pages
@@ -73,14 +74,14 @@ class HomeController extends Controller
         $user = Auth::user();
         // $userid= $user->id;
         $userid = auth()?->user()?->id;
-        $category = Category::all();
-        return view('Home.about',compact('category','products'));
+        $category1 = Category::all();
+        return view('Home.about',compact('category1','products'));
     }
     public function contact(){
         $products = Product::all();
-        $category = Category::all();
+        $category1 = Category::all();
        
-        return view ('Home.contact',compact('category','products'));
+        return view ('Home.contact',compact('category1','products'));
     }
 }
 

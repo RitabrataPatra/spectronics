@@ -22,13 +22,14 @@ class ProductController extends Controller
     {
         $testimonials = Testimonial::orderBy('id')->get();
         $total = Testimonial::count();
-
+       
         return view('admin.product.testihome', compact(['testimonials', 'total']));
     }
     public function testi_create()
     {
+        
+         return view('admin.product.testi');
 
-        return view('admin.product.testi');
     }
     public function testi_save(Request $request)
     {
@@ -38,19 +39,19 @@ class ProductController extends Controller
         //     'price' => 'required',
         //     'image' => 'mimes:png,jpeg,jpg|max:2048',
         // ]);
-
+        
         // $data = Product::create($validation);
-        $test = new Testimonial;
+        $test= new Testimonial;
 
-        $test->title = $request->title;
-        $test->designation = $request->designation;
-        $test->Testimonial = $request->Testimonial;
-
-
+        $test->title= $request->title;
+        $test->designation=$request->designation;
+        $test->Testimonial=$request->Testimonial;
+        
+        
         $test->save();
+        
 
-
-
+        
 
         if ($test) {
             session()->flash('success', 'Testimonial Added Successfully');
@@ -68,14 +69,14 @@ class ProductController extends Controller
 
     public function testi_update(Request $request, $id)
     {
-        $data = Testimonial::find($id);
-        $data->title = $request->title;
-        $data->designation = $request->designation;
-        $data->Testimonial = $request->Testimonial;
-
-        $data->save();
-
-
+        $data = Testimonial ::find($id);
+        $data->title=$request->title;
+        $data->designation=$request->designation;
+        $data->Testimonial=$request->Testimonial;
+        
+         $data->save();
+        
+        
         if ($data) {
             session()->flash('success', 'Testimonial Updated Successfully');
             return redirect(route('admin/testimonial'));

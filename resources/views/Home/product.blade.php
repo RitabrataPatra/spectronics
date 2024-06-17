@@ -31,10 +31,7 @@
                 </div><!-- /.process__icon -->
                 <h4 class="process__title">{{$product->title}}</h4>
                
-                <a href="#" class="btn btn__secondary btn__link">
-                  <span>Category : <br><br>{{$product->category->category}}</span>
-                  <i class="icon-arrow-right"></i>
-                </a>
+                
               </div><!-- /.process-item -->
               <!-- process-item #3 -->
               

@@ -35,7 +35,7 @@
                         <div class="row">
                             <div class="col mb-3">
                                 <label class="form-label">Testimonials</label>
-                                <textarea class="form-control" value="" name="Testimonials" id="" cols="30" rows="10">{{$testimonials->Testimonial}}</textarea>
+                                <textarea class="form-control" value="" name="Testimonial" id="" cols="30" rows="10">{{$testimonials->Testimonial}}</textarea>
                                 @error('category')
                                 <span class="text-danger">{{$message}}</span>
                                 @enderror 

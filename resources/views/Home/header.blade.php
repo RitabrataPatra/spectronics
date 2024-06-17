@@ -133,7 +133,7 @@
                       
                   
                   <li class="nav__item">
-                    @foreach ($category as $categories)
+                    @foreach ($category1 as $categories)
                         
                    
                     <a href="{{url('/productspage'.'/'.$categories->id??null)}}" class="nav__item-link">{{$categories->category}}</a> 

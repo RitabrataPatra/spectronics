@@ -43,7 +43,7 @@
                                 <td class="align-middle">{{$loop->iteration}}</td>
                                 <td class="align-middle">{{$testimonial->title}}</td>
                                 <td class="align-middle">{{$testimonial->designation}}</td>
-                                <td class="align-middle">{{$testimonial->Testimonials}}</td>
+                                <td class="align-middle">{{$testimonial->Testimonial}}</td>
                                 
                                 
                                 <td class="align-middle">

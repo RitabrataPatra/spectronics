@@ -41,7 +41,7 @@
                         
                         <div class="row mb-3">
                             <div class="col">
-                                <textarea class="form-control" name="Testimonials" id="" cols="30" rows="10" placeholder="Write testimonial here"></textarea>
+                                <textarea class="form-control" name="Testimonial" id="" cols="30" rows="10" placeholder="Write testimonial here"></textarea>
                                 @error('photo')
                                 <span class="text-danger">{{$message}}</span>
                                 @enderror

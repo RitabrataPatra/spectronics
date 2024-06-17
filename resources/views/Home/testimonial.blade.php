@@ -16,7 +16,7 @@
               @foreach ($testimonials as $testimonial)
               <!-- Testimonial #1 -->
               <div class="testimonial-item">
-                <h3 class="testimonial__title">{{$testimonial->Testimonials}}</h3>
+                <h3 class="testimonial__title">{{$testimonial->Testimonial}}</h3>
               </div><!-- /. testimonial-item -->
               @endforeach
               
