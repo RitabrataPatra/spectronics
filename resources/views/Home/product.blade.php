@@ -14,11 +14,14 @@
       <div class="row">
         
             
-        @foreach ($products as $product)
-        <div class="col-md-3 col-sm-12">
-          <div class="">
-            <div class=""
+        
+        <div class="col-12">
+          <div class="carousel-container">
+            
+            <div class="slick-carousel"
+            
               data-slick='{"slidesToShow": 4, "slidesToScroll": 1, "infinite":false, "arrows": false, "dots": false, "responsive": [{"breakpoint": 1200, "settings": {"slidesToShow": 3}}, {"breakpoint": 992, "settings": {"slidesToShow": 2}}, {"breakpoint": 767, "settings": {"slidesToShow": 2}}, {"breakpoint": 480, "settings": {"slidesToShow": 1}}]}'>
+              @foreach ($products as $product)
               <!-- process item #1 -->
               <!-- /.process-item -->
               <!-- process-item #2 -->
@@ -38,11 +41,13 @@
               <!-- process-item #4 -->
               
               <!-- process-item #5 -->
-              
+              @endforeach
             </div><!-- /.carousel -->
+            
           </div>
+          
         </div><!-- /.col-12 -->
-        @endforeach
+        
       </div><!-- /.row -->
     </div><!-- /.container -->
     <div class="cta bg-light-blue">
